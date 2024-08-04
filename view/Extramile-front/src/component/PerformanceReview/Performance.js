@@ -113,8 +113,8 @@ function Performance() {
         fetchPerformanceById(id).then((data) => {
           setFeedbackArray(data.feedback);
         });
-        setRating(1);
-        setComment("");
+        e.target.rating.value = '';
+        e.target.comment.value = '';
         return data;
       } else {
         console.error(data.message);

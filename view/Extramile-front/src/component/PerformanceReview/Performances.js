@@ -56,11 +56,11 @@ import MyContext from '../../context/Context';
         method: "DELETE",
       }
     );
-    console.log(res);
     if (res.ok) {
       fetchPerformanceArray().then((data) => {
         setPerformanceArray(data);
       });
+      console.log("Performance Deleted ",res);
     } else {
       console.error("Error deleting employee");
     }

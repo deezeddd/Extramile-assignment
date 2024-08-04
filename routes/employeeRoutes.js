@@ -81,7 +81,6 @@ router
   .route("/:id")
   .get(async (req, res) => {
     const employeeId = req.params.id;
-    console.log(employeeId);
     try {
       const employee = await getEmployeeById(employeeId);
       if (!employee) {

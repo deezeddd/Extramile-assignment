@@ -15,7 +15,6 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      console.log(process.env);
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}/api/employee/login`,
         {
@@ -27,7 +26,6 @@ function Login() {
         }
       );
       const data = await res.json();
-      console.log(data);
       if (res.ok) {
         if(localStorage.getItem('token')){
           localStorage.removeItem('token');

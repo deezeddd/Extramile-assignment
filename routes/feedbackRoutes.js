@@ -8,9 +8,7 @@ const router = express.Router();
 router.post("/add", async (req, res) => {
   const { performanceId, employeeId, comment, rating, name } = req.body;
   try {
-    console.log(req.body);
     const feedback = await addFeedback(performanceId, employeeId, comment, rating, name);
-    console.log(feedback);
     if (feedback) {
       res.status(200).json(feedback);
     }

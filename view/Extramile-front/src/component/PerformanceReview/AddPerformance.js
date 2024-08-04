@@ -17,7 +17,6 @@ function AddPerformance() {
     const formData = new FormData(form);
     const body = Object.fromEntries(formData.entries());
 
-    console.log("->", body);
     try {
       const res = await fetch(
         `${process.env.REACT_APP_API_URL}/api/performance/add`,
@@ -34,7 +33,6 @@ function AddPerformance() {
       if (res.ok) {
         console.log("Performance Review Added", data);
         if (selectedReviewers) {
-          console.log(selectedReviewers);
           addReviewers(selectedReviewers, data.performanceId);
         }
       } else {
@@ -48,7 +46,6 @@ function AddPerformance() {
   const addReviewers = async (reviewers, id) => {
     console.log(" => ", reviewers);
     for (const employeeId of reviewers) {
-      console.log(employeeId, id);
       console.log(
         `${process.env.REACT_APP_API_URL}/api/feedback/reviewer?employeeId=${employeeId}&performanceId=${id}`
       );
@@ -172,7 +169,6 @@ function AddPerformance() {
                               selectedReviewer !== reviewer.employeeId
                           );
                       setSelectedReviewers(updatedReviewers);
-                      console.log(selectedReviewers);
                     }}
                     className="mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded"
                   />
