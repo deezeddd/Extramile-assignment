@@ -65,7 +65,7 @@ import MyContext from '../../context/Context';
       console.error("Error deleting employee");
     }
   } catch (error) {
-    alert("Error deleting employee: " + error.message);
+    console.error("Error deleting employee: " + error.message);
   }
   };
 

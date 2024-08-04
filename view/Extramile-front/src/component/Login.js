@@ -41,7 +41,7 @@ function Login() {
         console.error("Error, please retry");
       }
     } catch (error) {
-      alert("Error logging in: " + error.message);
+      console.error("Error logging in: " + error.message);
     }
   };
 

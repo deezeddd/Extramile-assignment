@@ -39,7 +39,7 @@ function AddPerformance() {
         console.error(data.message);
       }
     } catch (error) {
-      alert("Error Adding PR: " + error.message);
+      console.error("Error Adding PR: " + error.message);
     }
   };
   //Run for each Id and add reviewer
@@ -64,7 +64,7 @@ function AddPerformance() {
       }
       if (!res.ok) {
         const error = await res.json();
-        alert(`Error adding reviewer: ${error.message}`);
+        console.warn(`Error adding reviewer: ${error.message}`);
       }
     }
   };
@@ -90,7 +90,7 @@ function AddPerformance() {
         return filterData;
       }
     } catch (error) {
-      alert("Error Fetching All Employees: " + error.message);
+      console.warn("Error Fetching All Employees: " + error.message);
     }
   };
 
@@ -123,7 +123,7 @@ function AddPerformance() {
         console.error(data.message);
       }
     } catch (error) {
-      alert("Error Fetching Employee: " + error.message);
+      console.warn("Error Fetching Employee: " + error.message);
     }
   };
 

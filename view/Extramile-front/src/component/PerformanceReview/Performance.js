@@ -72,7 +72,7 @@ function Performance() {
         console.error(data.message);
       }
     } catch (error) {
-      alert("Error Fetching Performance Reviews: " + error.message);
+      console.error("Error Fetching Performance Reviews: " + error.message);
     }
   };
 
@@ -120,7 +120,7 @@ function Performance() {
         console.error(data.message);
       }
     } catch (error) {
-      alert("Error Fetching Performance Reviews: " + error.message);
+      console.warn("Error Fetching Performance Reviews: " + error.message);
     }
   };
 

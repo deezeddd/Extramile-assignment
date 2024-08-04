@@ -10,10 +10,13 @@ const app = express(); // express app
 const PORT = process.env.PORT || 3000;
 
 //Middleware
-app.use( cors());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.get("/", (req, res) => {
+    console.log("APP Started");
+    res.send("APP Started");
+})
 
 app.use("/api/employee", employeeRouter);
 app.use("/api/performance", performanceRouter);

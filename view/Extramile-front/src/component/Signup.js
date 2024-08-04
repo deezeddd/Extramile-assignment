@@ -27,7 +27,7 @@ const handleSignUp = async (e) => {
         console.debug(data);
       }
     } catch (error) {
-      alert("Error logging in: " + error.message);
+      console.error("Error logging in: " + error.message);
     }
 }
 
