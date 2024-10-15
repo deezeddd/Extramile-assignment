@@ -15,7 +15,7 @@ import { useState } from "react";
          Dark Mode
        </button>
        <div className="text-2xl mt-5">
-         <h1 className="text-6xl text-center">ExtraMile - Assignment</h1>
+         <h1 className="text-6xl text-center">Home</h1>
          <div className="text-2xl mt-3">
            <h1 className="underline text-orange-400">Routes (Front-end): </h1>
            <ul className={`${"text-blue-400"} mt-4`}>
